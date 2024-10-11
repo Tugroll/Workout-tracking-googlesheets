@@ -13,7 +13,7 @@ APP_ID = os.environ["NT_APP_ID"]
 API_KEY = os.environ["NT_API_KEY"]
 
 
-exercise_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
+exercise_endpoint = os.environ["SHEET_ENDPOINT"]
 
 exercise_text = input("Tell me which exercises you did: ")
 
