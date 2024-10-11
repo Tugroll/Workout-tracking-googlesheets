@@ -13,7 +13,7 @@ APP_ID = os.environ["NT_APP_ID"]
 API_KEY = os.environ["NT_API_KEY"]
 
 
-exercise_endpoint = os.environ["SHEET_ENDPOINT"]
+exercise_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
 
 exercise_text = input("Tell me which exercises you did: ")
 
@@ -34,7 +34,7 @@ response = requests.post(exercise_endpoint, json=parameters, headers=headers)
 result = response.json()
 print(result)
 
-SHEETY_URL = "https://api.sheety.co/f7836d9abda71aedc016c0937e331a87/myWorkout/sayfa1"
+SHEETY_URL = os.environ["SHEET_ENDPOINT"]
 today = str(datetime.today().date())
 current_time = datetime.now().time().strftime("%X")
 
